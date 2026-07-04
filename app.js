@@ -7,7 +7,7 @@ let history = {};
 
 const APP_KEY = 'civics_study';
 
-fetch('data.json?v=2')
+fetch(`data.json?v=${Date.now()}`, { cache: 'no-store' })
   .then(res => res.json())
   .then(json => {
     data = json;
